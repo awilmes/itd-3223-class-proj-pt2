@@ -12,6 +12,12 @@ TODO: Add wiring diagram
 
 **Prerequisites**
 
-TODO: Add prerequisites
+Raspberry Pi:
+- Node-RED
+- Remote-RED (for push notifications)
+
+Python:
+- RPi.GPIO
+- paho-mqtt
 
 **Install**
