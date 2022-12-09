@@ -3,6 +3,7 @@ import time
 import RPi.GPIO as GPIO
 import paho.mqtt.client as mqtt
 
+
 # ID of temperature sensor
 # found in /sys/bus/w1/devices/
 sensorid = "28-3c01f0957d92" 
