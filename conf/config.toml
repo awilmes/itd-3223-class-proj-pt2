@@ -1,5 +1,0 @@
-[client]
-sensorid = "28-3c01f0957d92"
-
-[mqtt]
-broker = "test.mosquitto.org"
