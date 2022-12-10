@@ -19,6 +19,8 @@ Raspberry Pi:
 
 Smartphone:
 - Remote-RED app (for push notifications)
+    - [iOS](https://apps.apple.com/us/app/remote-red/id1529777665)
+    - [Google Play](http://play.google.com/store/apps/details?id=com.looking4cache.remotered.android)
 
 Python (3.9.2^):
 - RPi.GPIO
