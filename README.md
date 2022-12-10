@@ -12,7 +12,7 @@ The purpose of this project is to simulate a flood-detection alarm, as well as p
 
 ## Installation Instructions
 
-**Prerequisites**
+### **Prerequisites**
 
 Raspberry Pi:
 - Node-RED
@@ -24,7 +24,7 @@ Python (3.9.2^):
 - RPi.GPIO
 - paho-mqtt
 
-**Install Node-RED**
+### **Install Node-RED**
 
 1. From the Raspberry Pi CLI run:
 
@@ -46,7 +46,7 @@ Python (3.9.2^):
 
 > `node-red-stop`
 
-**Configure RPi Python Environment**
+### **Configure RPi Python Environment**
 
 1. Create a virtual environment in the project root directory:
 
@@ -62,7 +62,7 @@ Python (3.9.2^):
 
 > `pip install requirements.txt`
 
-**Configure Node-RED Flow**
+### **Configure Node-RED Flow**
 
 ![Node-RED Flow](https://awilmes-github-artifacts.s3.amazonaws.com/itd-3223-class-proj-part-2/node-red-flow.png "Node-RED Flow")
 
