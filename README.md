@@ -18,7 +18,7 @@ Raspberry Pi:
 - Node-RED
 
 Smartphone:
-- Remote-RED (for push notifications)
+- Remote-RED app (for push notifications)
 
 Python (3.9.2^):
 - RPi.GPIO
@@ -38,12 +38,50 @@ Python (3.9.2^):
 
 > `<RPi IP>:1880`
 
+4. From the Node-RED UI, use "Manage Palette" to install the following packages:
+    - > `node-red-contrib-remote` (Adds remote function blocks for configuring push notifications)
+    - > `node-red-node-email` (Adds social blocks for email access)
+
 4. To stop the Node-RED service, run:
 
 > `node-red-stop`
 
-## Screenshots
+**Configure RPi Python Environment**
 
-**Node-RED**
+1. Create a virtual environment in the project root directory:
 
-TODO: Add Screenshots
+> `python -m venv .venv`
+
+2. Activate the virtual environment:
+
+(macOS) > `source .venv/bin/activate`
+
+(Windows) > `.venv\Scripts\activate.bat`
+
+3. Install dependencies:
+
+> `pip install requirements.txt`
+
+**Configure Node-RED Flow**
+
+![Node-RED Flow](https://awilmes-github-artifacts.s3.amazonaws.com/itd-3223-class-proj-part-2/node-red-flow.png "Node-RED Flow")
+
+1. remote-access node:
+    - Connect your flow to the Remote-RED app by following the documentation [here](https://www.remote-red.com/en/help/).
+
+2. mqtt in node:
+    - Configure a server and select it
+    - Enter the topic to subscribe to ('ALARM_STATUS' for this project)
+
+3. debug node (output):
+    - Shows output in local UI
+    - Not required but useful for troubleshooting
+
+4. remote-notification node
+    - Select the config you made for the remote-access node
+    - Add a title for the message (string)
+    - Add a body for the message (msg.payload)
+
+5. email node:
+    - Note: Requires a gmail account with 2FA enabled. This allows you to create an app password for use with this node.
+
